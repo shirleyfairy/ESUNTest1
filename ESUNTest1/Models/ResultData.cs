@@ -12,7 +12,10 @@ namespace ESUNTest1.Models
         public String Success { get; set; }
 
         [JsonProperty(PropertyName = "limit")]
-        public ResultData Result { get; set; }
+        public int Limit { get; set; }
+
+        [JsonProperty(PropertyName = "total")]
+        public int Total { get; set; }
 
         [JsonProperty(PropertyName = "records")]
         public RecordsData[] Records { get; set; }

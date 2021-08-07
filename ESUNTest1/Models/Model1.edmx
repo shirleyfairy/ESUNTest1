@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ESUNTestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MarriageInfo">
+          <Key>
+            <PropertyRef Name="statistic_yyy" />
+            <PropertyRef Name="according" />
+            <PropertyRef Name="site_id" />
+            <PropertyRef Name="marriage_type" />
+            <PropertyRef Name="female_age" />
+            <PropertyRef Name="male_age" />
+          </Key>
+          <Property Name="statistic_yyy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="according" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="site_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="marriage_type" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="female_age" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="male_age" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="marry_pair" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="ESUNTestModelStoreContainer">
+          <EntitySet Name="MarriageInfo" EntityType="Self.MarriageInfo" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ESUNTestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MarriageInfo">
+          <Key>
+            <PropertyRef Name="statistic_yyy" />
+            <PropertyRef Name="according" />
+            <PropertyRef Name="site_id" />
+            <PropertyRef Name="marriage_type" />
+            <PropertyRef Name="female_age" />
+            <PropertyRef Name="male_age" />
+          </Key>
+          <Property Name="statistic_yyy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="according" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="site_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="marriage_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="female_age" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="male_age" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="marry_pair" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ESUNTestEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MarriageInfo" EntityType="Self.MarriageInfo" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ESUNTestModelStoreContainer" CdmEntityContainer="ESUNTestEntities">
+          <EntitySetMapping Name="MarriageInfo">
+            <EntityTypeMapping TypeName="ESUNTestModel.MarriageInfo">
+              <MappingFragment StoreEntitySet="MarriageInfo">
+                <ScalarProperty Name="statistic_yyy" ColumnName="statistic_yyy" />
+                <ScalarProperty Name="according" ColumnName="according" />
+                <ScalarProperty Name="site_id" ColumnName="site_id" />
+                <ScalarProperty Name="marriage_type" ColumnName="marriage_type" />
+                <ScalarProperty Name="female_age" ColumnName="female_age" />
+                <ScalarProperty Name="male_age" ColumnName="male_age" />
+                <ScalarProperty Name="marry_pair" ColumnName="marry_pair" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

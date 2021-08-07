@@ -29,5 +29,11 @@ namespace ESUNTest1.Models
         [JsonProperty(PropertyName = "marry_pair")]
         public String MarryPair { get; set; }
 
+        public override string ToString()
+        {
+            return Year + "-" + According + "-" + Site + "-" + MarriageTp + "-" + Female
+                + "-" + Male + "-" + MarryPair;
+        }
+
     }
 }
